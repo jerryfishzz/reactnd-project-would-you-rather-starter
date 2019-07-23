@@ -10,22 +10,4 @@ This is a web app for the polling game. Users can answer questions then check po
 
 ## Installation and lauch
 
-Just `npm install` and `npm start`
-
-## Main libraries
-
-### UI
-
-- Material UI
-
-- React-bootstrap
-
-- React-fontawesome
-
-### Tools
-
-- Classname for more than one class needed on one element
-
-- React-cookie for browser cookie
-
-- React-redux-loading for loading animation
+Just `npm install` and `npm start`, then enjoy it.
