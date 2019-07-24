@@ -1,6 +1,6 @@
 # Would You Rather
 
-This is a web app for the polling game. Users can answer questions then check polling results as well as raise questions for other users to answer. Ranks by the total counts a user has asked and answered can be also checked.
+From Udacity React project 2. This is a web app for the polling game. Users can answer questions then check polling results as well as raise questions for other users to answer. Ranks by the total counts a user has asked and answered can be also checked.
 
 ## Features
 
