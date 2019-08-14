@@ -18,23 +18,29 @@ import NonExisting from './NonExisting'
 
 class App extends Component {
   componentDidMount() {
-    const { cookies, logState, dispatch } = this.props
+    const { 
+      cookies, 
+      logState, 
+      handleUserLogin, 
+      appInit, 
+      handleInitialData 
+    } = this.props
     const authedUser = cookies.get('authedUser')
 
     // Login from cookie
     const logFromCookie = () => {
       // Login
       if (authedUser && logState === null) {
-        dispatch(handleUserLogin(authedUser))
+        handleUserLogin(authedUser)
       }
 
       // No cookie then set related status
       if (!authedUser && logState === null) {
-        dispatch(appInit())
+        appInit()
       }
     }
 
-    dispatch(handleInitialData(logFromCookie))
+    handleInitialData(logFromCookie)
   }
 
   render() {
@@ -71,4 +77,7 @@ const mapStateToProps = ({ logState }) => {
   }
 }
 
-export default connect(mapStateToProps)(withCookies(App))
+export default connect(
+  mapStateToProps, 
+  { handleUserLogin, appInit, handleInitialData }
+)(withCookies(App))
